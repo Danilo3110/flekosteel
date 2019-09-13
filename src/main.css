@@ -1,0 +1,602 @@
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    line-height: normal;
+}
+
+.containerAll {
+    display: grid;
+    grid-template-areas:
+        "main"
+        "info"
+        "description"
+        "order"
+        "form"
+        "footer";
+    background-color: whitesmoke;
+}
+
+.main {
+    grid-area: main;
+    background-image: url('../assets/flekosteel-preparat-za-bolove-u-ledjima-i-zglobovima-2.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.box {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.59) 100%);
+    background-size: auto;
+    background-position: 0px 0px;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 1.8vw 0;
+}
+
+#price_tag {
+    width: 8.5vw;
+    position: absolute;
+    top: 25vw;
+    left: 78vw;
+    cursor: pointer;
+    animation: flash 2s 2;
+}
+
+@keyframes flash {
+
+    from,
+    50%,
+    to {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+.title {
+    width: 15vw;
+    text-align: center;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    color: whitesmoke;
+    background-image: linear-gradient(to right top, #f48a20, #f57629, #f36133, #ef4c3d, #e83447, #e4274e, #de1756, #d8015d, #d50263, #d20568, #cf0a6e, #cb1073);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px 0px;
+    border-style: none;
+    border-radius: 6.51vw;
+    padding: 1vw;
+    margin: auto;
+    font-weight: bold;
+    letter-spacing: 0.5vw;
+    cursor: pointer;
+    animation: pulse 0.8s infinite;
+}
+
+@keyframes pulse {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.main_title {
+    font-size: 2.2vw;
+    color: rgb(255, 223, 0);
+    text-align: center;
+    font-weight: bold;
+    margin: 0 auto 1.5vw;
+}
+
+.main_title2 {
+    font-size: 1.55vw;
+    text-align: center;
+    color: whitesmoke;
+    margin: auto;
+    line-height: 2.2vw;
+}
+
+.flex_main {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: space-around;
+    padding: 2vw 16vw;
+}
+
+.flex_main img {
+    width: 34%;
+    height: 34%;
+    padding-top: 1vw;
+    animation: bounceInDown 1s;
+}
+
+@keyframes bounceInDown {
+
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -3000px, 0);
+        transform: translate3d(0, -3000px, 0);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 25px, 0);
+        transform: translate3d(0, 25px, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, 5px, 0);
+        transform: translate3d(0, 5px, 0);
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.flex_main_desc {
+    margin-left: 3vw;
+    width: 39vw;
+    height: 28.5vw;
+    background-color: rgba(0, 0, 0, 0.38);
+    display: flex;
+    flex-direction: column;
+    padding: 1vw;
+    animation: fadeInDown 1s;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.desc_title {
+    font-size: 1.8vw;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.desc_list {
+    list-style: none;
+    margin-left: -1.5vw;
+}
+
+.desc_list li {
+    font-size: 1.37vw;
+    color: rgb(255, 223, 0);
+    line-height: 3vw;
+}
+
+.desc_list li i {
+    color: rgb(255, 223, 0);
+    margin-right: 0.5vw;
+}
+
+.desc_title2 {
+    font-size: 1.2vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: whitesmoke;
+    margin: 0 auto;
+}
+
+.desc_title3 {
+    font-size: 1.1vw;
+    color: white;
+    margin: 1vw auto;
+}
+
+.desc_button {
+    font-size: 1.41vw;
+    text-transform: none;
+    letter-spacing: normal;
+    font-weight: 400;
+    width: 16.8vw;
+    padding: 1.15vw 1vw;
+    animation: none;
+    margin: 0 auto 1vw;
+    background-image: none;
+    background-color: #ef4c3d;
+}
+
+.desc_button:hover {
+    background-color: #1abc9c;
+    box-shadow: rgba(0, 6, 8, 0.35) 0px 9px 5px 0px;
+}
+
+.main_info {
+    padding: 2.4vw 19vw;
+    background-color: rgb(237, 237, 237);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.main_info div {
+    color: rgb(0, 54, 74);
+    font-size: 1.18vw;
+    margin-left: -5vw;
+}
+
+.main_info i {
+    margin-top: -0.4vw;
+    color: #1abc9c;
+}
+
+.info {
+    grid-area: info;
+    padding: 2vw 13vw 5vw;
+}
+
+.info_title {
+    font-size: 2.28vw;
+    color: rgb(0, 54, 74);
+    text-align: center;
+    font-weight: bold;
+}
+
+.info_txt1,
+.info_txt2 {
+    display: inline-block;
+    font-size: 1.3vw;
+    width: 34.5vw;
+}
+
+.info_txt1 p,
+.info_txt2 p {
+    line-height: 2.1vw;
+}
+
+.info_img1 {
+    margin-top: 2vw;
+    margin-left: 2vw;
+    width: 32vw;
+}
+
+.info_img2 {
+    width: 32vw;
+    margin-right: 4vw;
+}
+
+.description {
+    padding: 6.5vw 14vw 3vw;
+    grid-area: description;
+    background-image: url('../assets/flekosteel-preparat-za-bolove-u-ledjima-i-zglobovima.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logo1,
+.logo2 {
+    position: absolute;
+    top: 135vw;
+    left: 45%;
+    width: 9vw;
+}
+
+.description_title1 {
+    font-size: 2.41vw;
+}
+
+.description_title2 {
+    font-size: 1.3vw;
+    line-height: 1.9vw;
+}
+
+.description_box,
+.box_usage {
+    margin: 2.5vw 0 2vw;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.box_usage {
+    justify-content: space-around;
+}
+
+.box_ingredient img {
+    width: 10vw;
+    cursor: pointer;
+}
+
+.box_ingredient img:hover {
+    transform: scale(1.05);
+    animation: all 1s ease-in-out;
+}
+
+.box_title {
+    font-size: 1.3vw;
+    font-weight: bold;
+    color: white;
+}
+
+.box_txt {
+    font-size: 1.1vw;
+    line-height: 1.6vw;
+    color: whitesmoke;
+}
+
+.description_title3 {
+    font-size: 2vw;
+}
+
+.box_usage p {
+    font-size: 1.2vw;
+    line-height: 2vw;
+}
+
+.box_usage span {
+    font-size: 1.75vw;
+    color: white;
+}
+
+.order {
+    grid-area: order;
+    background-color: rgb(255, 199, 0);
+    text-align: center;
+    padding-bottom: 4vw;
+}
+
+.order_title {
+    font-size: 2.28vw;
+    color: rgb(42, 74, 117);
+    font-weight: bold;
+}
+
+.order_txt,
+.order_txt2 {
+    font-size: 1.3vw;
+    font-weight: 600;
+    color: rgb(42, 74, 117);
+    line-height: 2vw;
+}
+
+.order_txt2 {
+    font-size: 1.63vw;
+    text-decoration: underline;
+}
+
+.logo2 {
+    top: 216.5vw;
+}
+
+.form {
+    grid-area: form;
+    padding: 4vw 13vw 3vw;
+    text-align: center;
+    background-color: rgb(237, 237, 237);
+}
+
+.form_title {
+    font-size: 2.8vw;
+}
+
+.form_title span {
+    color: teal;
+    font-weight: bold;
+}
+
+.form_container,
+.privacy_container {
+    margin-top: 2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.form_box {
+    width: 32vw;
+    height: 30vw;
+    padding: 1.3vw;
+    background-color: whitesmoke;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px 0px;
+}
+
+.form_box_title,
+.form_box_title2 {
+    font-size: 1.63vw;
+    font-weight: bold;
+    color: rgb(42, 74, 117);
+}
+
+.price1,
+.price2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3.5vw;
+    font-weight: 600;
+    text-decoration: line-through;
+    color: #e83447;
+}
+
+.price_title {
+    font-size: 3vw;
+    font-weight: bold;
+    color: rgb(42, 74, 117);
+}
+
+.price2 {
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: rgb(123, 197, 66);
+    width: 7.5vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form_box_title2 {
+    font-size: 1.2vw;
+}
+
+.form_order {
+    margin: 3.5vw auto 2vw;
+    width: 28vw;
+    height: 17.5vw;
+    padding: 1vw;
+    background-image: linear-gradient(to left top, #2a4a75, #006d98, #00909b, #00ae79, #7bc542);
+    text-align: left;
+}
+
+.form_order p {
+    font-size: 1vw;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.form_order p span {
+    color: #e83447;
+    position: relative;
+    top: -0.4vw;
+}
+
+.form_order input {
+    width: 27.8vw;
+    height: 1.9vw;
+    font-size: 1.15vw;
+    padding-left: 0.3vw;
+    border: none;
+    border-radius: 2px;
+}
+
+.form_button {
+    margin-top: 2vw;
+    margin-bottom: 1vw;
+    text-align: center;
+    width: 28.1vw;
+    padding: 0.8vw 0;
+    background-color: rgb(123, 197, 66);
+    border: none;
+    border-radius: 2px;
+    color: whitesmoke;
+    font-size: 1.2vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.form_button:hover {
+    background-color: #fdbd01;
+}
+
+.privacy {
+    margin: 3vw auto;
+    color: rgb(42, 74, 117);
+    font-size: 0.95vw;
+    line-height: 1.4vw;
+}
+
+.privacy_container {
+    margin-top: 4vw;
+}
+
+.privacy_card {
+    width: 11.5vw;
+    height: 17vw;
+    padding: 1vw;
+    background-color: rgb(237, 237, 237);
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px 0px;
+    border-radius: 5px;
+    border: 0.5px solid dotted;
+    cursor: pointer;
+}
+
+.privacy_card:hover {
+    transform: scale(1.05);
+}
+
+.card_title {
+    font-size: 1vw;
+    font-weight: bold;
+    color: rgb(42, 74, 117);
+    text-transform: uppercase;
+    border-top: 1px dotted rgb(123, 197, 66);
+}
+
+.card_txt {
+    font-size: 0.85vw;
+    color: rgb(42, 74, 117);
+}
+
+.privacy_card img {
+    width: 7.1vw;
+}
+
+#card_img2,
+#card_img5 {
+    margin-top: 2.2vw;
+}
+
+#card_img3 {
+    margin-top: 3vw;
+}
+
+#card_img4 {
+    margin-top: 0.5vw;
+}
+
+.footer {
+    grid-area: footer;
+    text-align: center;
+    background-color: rgb(13, 23, 37);
+    padding: 1.4vw 14vw 1.6vw;
+}
+
+.footer_title,
+.footer p:last-child {
+    font-size: 1vw;
+    color: whitesmoke;
+}
+
+.footer p:last-child {
+    font-size: 0.8vw;
+    margin-top: 2vw;
+    text-transform: uppercase;
+    text-decoration: underline;
+    cursor: pointer;
+}
