@@ -37,7 +37,7 @@ const sendData = () => {
             (async () => {
                 await postToDatabase('/narudzbine', orderData);
                 alert('Uspešno ste naručili FlekoSteel');
-                console.log(orderData);
+                $('input').val('');
             })();
         } else {
             alert('Molimo, unesite podatke');
