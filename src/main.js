@@ -1,5 +1,50 @@
 'use strict';
 
+const url = `http://localhost:3001`;
+const headers = { 'Content-Type': 'application/json' };
+const api = axios.create({baseURL: `${url}`});
+
+const getFromDatabase = async (query) => {
+    try {
+        const response = await api.get(`${query}`, { headers });
+        return response.data;
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+const postToDatabase = async (tableName, data) => {
+    try {
+        await api.post(`${tableName}`, data, { headers });
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+const sendData = () => {
+    $('#submit_order').on('click', () => {
+        const regex = $('#name').val() !== '' && $('#address').val() !== '' && $('#tel').val() !== '';
+        if (regex) {
+            const currentDate = new Date();
+            const orderCreated = currentDate.toLocaleString('sr-RS');
+        
+            const orderData = {
+                ime_prezime: $('#name').val(),
+                adresa: $('#address').val(),
+                telefon: $('#tel').val(),
+                datum: orderCreated
+            };
+            (async () => {
+                await postToDatabase('/narudzbine', orderData);
+                alert('Uspešno ste naručili FlekoSteel');
+                console.log(orderData);
+            })();
+        } else {
+            alert('Molimo, unesite podatke');
+        }
+    });
+};
+
 const animateFocus = (toLocation) => {
     $('html, body').animate({ scrollTop: $(`${toLocation}`).offset().top }, 1000);
 };
@@ -24,4 +69,4 @@ const AnimationsAll = () => {
     });
 };
 
-$(document).on('load', AnimationsAll());
+$(document).on('load', AnimationsAll(), sendData());

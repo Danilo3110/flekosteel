@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
     <link rel="stylesheet" href="main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js" defer></script>
     <title>Flekosteel krema</title>
 </head>
@@ -171,7 +172,7 @@
                         <input type="text" id="address">
                         <p>Broj telefona <span>&Star;</span></p>
                         <input type="text" id="tel" placeholder="066/22-39-456">
-                        <div class="form_button">Naruči</div>
+                        <div class="form_button" id="submit_order">Naruči</div>
                     </div>
                     <p class="privacy">
                         U skladu sa najnovijim zakonima o zaštiti podataka (GDPR), obavezujemo
