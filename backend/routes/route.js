@@ -17,9 +17,11 @@ module.exports = function (app, express, mysqlConnection) {
         }
         mysqlConnection.query('INSERT INTO narudzbine (ime_prezime, adresa, telefon, datum) values (?,?,?,?)',
           [req.body.ime_prezime, req.body.adresa, req.body.telefon, req.body.datum], function (error, results) {
-            if (error) throw error;
+            if (error) throw console.log(error, 'ne radi');
             //req.user is the info about the logged in user
             return res.send({ error: false, data: results, message: 'New list has been added successfully.', user: req.user });
           });
       });
+    
+    app.use(router);
 }
