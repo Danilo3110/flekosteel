@@ -740,7 +740,6 @@ body {
         padding: 7vw 5vw;
         display: flex;
         flex-direction: column;
-
     }
 
     .info_title {
@@ -907,7 +906,6 @@ body {
         width: 10vw;
     }
 
-
     .footer {
         padding: 3vw 12vw;
     }
@@ -930,15 +928,310 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-    #price_tag {
-        top: 64vw;
+    .box img {
+        width: 17vw;
+        height: 10vw;
     }
 
-    .logo1 {
-        top: 337vw;
+    .box ul {
+        padding-inline-start: 0;
+        margin-block-start: 0;
+        margin: 3vw auto;
+    }
+
+    .box ul li {
+        margin: 0 2vw;
+        font-size: 3.2vw;
+    }
+
+    #title {
+        width: 21vw;
+        height: 2.2vw;
+        padding: 1.8vw;
+        font-size: 2.6vw;
+    }
+
+    .main {
+        padding-top: 38vw;
+    }
+
+    .main_title {
+        font-size: 5.2vw;
+    }
+
+    .main_title2 {
+        font-size: 3.6vw;
+        line-height: 4vw;
+        padding: 2vw 5vw 0;
+    }
+
+    .flex_main {
+        padding: 3vw 8vw;
+        flex-direction: column;
+        justify-self: center;
+        justify-content: space-between;
+    }
+
+    .flex_main img {
+        width: 70%;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .flex_main_desc {
+        width: 75vw;
+        padding: 5vw 3vw;
+        margin: 5vw auto;
+    }
+
+    .desc_title {
+        font-size: 4vw;
+    }
+
+    .desc_list li {
+        font-size: 3.4vw;
+        line-height: 6vw;
+    }
+
+    .desc_title2 {
+        font-size: 3.2vw;
+    }
+
+    .desc_title3 {
+        font-size: 3vw;
+    }
+
+    .desc_button {
+        font-size: 3.6vw;
+        width: 45vw;
+        margin-top: 2vw;
+    }
+
+    #price_tag {
+        width: 27vw;
+        top: 201vw;
+        left: 72vw;
+    }
+
+    .main_info {
+        padding: 5vw 3vw;
+        flex-wrap: wrap;
+        line-height: 8vw;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .main_info div {
+        font-size: 3.2vw;
+        margin-left: 1vw;
+        margin-top: -0.4vw;
+    }
+
+    .main_info i {
+        font-size: 4vw !important;
+        line-height: 8vw;
+        margin-left: 3vw;
+    }
+
+    .info {
+        padding: 9vw 5vw 14vw;
+    }
+
+    .info_title {
+        font-size: 5.2vw;
+        margin-bottom: 3vw;
+    }
+
+    .info_txt1,
+    .info_txt2 {
+        font-size: 3.6vw;
+        width: 82vw;
+    }
+
+    .info_txt1 p,
+    .info_txt2 p {
+        line-height: 5vw;
+    }
+
+    .info_img1,
+    .info_img2 {
+        width: 82vw;
+        margin: 2vw auto;
+    }
+
+    .description {
+        padding: 15vw 5vw 10vw;
+    }
+
+    .description_title2 {
+        padding: 2vw 5vw 0;
+        text-align: justify;
+    }
+
+    .description_title3 {
+        margin: 10vw auto 0;
+    }
+
+    .description_box {
+        margin: 2.5vw auto;
+    }
+
+    .box_ingredient {
+        margin: 3vw 2vw;
+        border-bottom: 1.5px dotted #7bc542;
+    }
+
+    .box_ingredient img {
+        width: 35vw;
+    }
+
+    .box_title {
+        font-size: 4vw;
+    }
+
+    .box_txt,
+    .box_usage p {
+        font-size: 3.5vw;
+        line-height: 4vw;
+    }
+
+    .box_usage {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .box_usage p {
+        margin-left: 16vw;
+    }
+
+    .order {
+        padding: 7vw 0 11vw;
+    }
+
+    .order_title {
+        font-size: 5vw;
+    }
+
+    .order_txt {
+        font-size: 3.4vw;
+        line-height: 4vw;
+        padding: 0 5vw;
+    }
+
+    .order_txt2 {
+        font-size: 3.8vw;
+    }
+
+    .form {
+        padding: 12vw 2vw;
+    }
+
+    .form_title {
+        font-size: 5.2vw;
+    }
+
+    .form_box {
+        width: 80vw;
+        height: auto;
+        margin: 2vw auto;
+        padding: 4vw 2.5vw;
+    }
+
+    .form_box_title {
+        font-size: 4vw;
+    }
+
+    .form_box_title2 {
+        font-size: 3.5vw;
+    }
+
+    .price1,
+    .price2 {
+        font-size: 12vw;
+    }
+
+    .price2 {
+        width: 55vw;
+    }
+
+    .form_order {
+        width: 65vw;
+        padding: 5vw;
+    }
+
+    .form_order p {
+        font-size: 5.2vw;
+        margin-left: 0;
+    }
+
+    .form_order input {
+        font-size: 5.2vw;
+        height: 8vw;
+        width: 65vw;
+        padding-left: 1vw;
+    }
+
+    .form_button {
+        font-size: 5vw;
+        margin: 10vw auto 2vw;
+        padding: 1.8vw 10vw;
+    }
+
+    .price_title {
+        font-size: 11vw;
+    }
+
+    .privacy {
+        font-size: 3vw;
+        font-weight: 600;
+        line-height: 3.8vw;
+        margin: 4vw 6.5vw 0;
+    }
+
+    .privacy_container {
+        margin-top: 6vw;
+    }
+
+    .privacy_card {
+        width: 40vw;
+        height: 70vw;
+        margin: 2vw auto;
+        padding: 2vw;
+    }
+
+    .card_title {
+        font-size: 3.5vw;
+        border-top: 1.5px dotted #7bc542;
+    }
+
+    .card_txt {
+        font-size: 3.3vw;
+    }
+
+    .privacy_card img {
+        width: 28vw;
+    }
+
+    .footer {
+        padding: 7vw 12vw;
+    }
+
+    .footer p {
+        font-size: 3.4vw;
+    }
+
+    .footer p:last-child {
+        font-size: 3.2vw;
+    }
+
+    .logo1,
+    .logo2 {
+        top: 681vw;
+        left: 40%;
+        width: 22vw;
     }
 
     .logo2 {
-        top: 485vw;
+        top: 1157vw;
     }
 }
